@@ -197,9 +197,19 @@ body::before {
   box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
 }
 
+@keyframes pulse-ring {
+  0% { box-shadow: 0 4px 20px rgba(0,102,204,0.3), 0 0 0 0 rgba(0,153,255,0.4); }
+  70% { box-shadow: 0 4px 20px rgba(0,102,204,0.3), 0 0 0 10px rgba(0,153,255,0); }
+  100% { box-shadow: 0 4px 20px rgba(0,102,204,0.3), 0 0 0 0 rgba(0,153,255,0); }
+}
+.m4-phone {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
 .m4-phone:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(0, 153, 255, 0.4);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 35px rgba(0,153,255,0.55);
+  background: linear-gradient(135deg,#33b5ff,#0077ee);
+  animation: none;
 }
 
 .m4-body {
@@ -478,7 +488,7 @@ body::before {
 
 </div>
     <br style="margin-bottom:6px">
-    <a class="m4-phone" href="tel:0825684139">
+    <a class="m4-phone" href="tel:0825684139" onclick="return true;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
       0825 684 139
     </a>
@@ -487,11 +497,11 @@ body::before {
     <div class="m4-slabel">Kết nối với tôi</div>
     <div class="m4-socials">
       <a class="m4-sbtn" href="https://www.facebook.com/haihau.le.7" target="_blank"><div class="ico ico-fb"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><span>Facebook</span></a>
-      <a class="m4-sbtn" href="[TIKTOK_URL]" target="_blank"><div class="ico ico-tiktok"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.7a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.05.98.15V9.48a6.5 6.5 0 0 0-1-.08A6.5 6.5 0 0 0 5 16.5a6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V9.74a8.66 8.66 0 0 0 2.59 1.95v-3z"/></svg></div><span>TikTok</span></a>
+      <a class="m4-sbtn" href="https://www.tiktok.com/@huetatyvinhomes" target="_blank"><div class="ico ico-tiktok"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.7a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.05.98.15V9.48a6.5 6.5 0 0 0-1-.08A6.5 6.5 0 0 0 5 16.5a6.5 6.5 0 0 0 6.5 6.5 6.5 6.5 0 0 0 6.5-6.5V9.74a8.66 8.66 0 0 0 2.59 1.95v-3z"/></svg></div><span>TikTok</span></a>
       
       <a class="m4-sbtn" href="https://zalo.me/0825684139" target="_blank"><div class="ico ico-zalo"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M22 11.23c0-4.6-4.48-8.33-10-8.33S2 6.63 2 11.23c0 3.7 2.9 6.82 7 7.9 0 .1-.2.83-.44 1.76l-.16.63c-.08.31.14.54.42.36 0 0 2.65-1.7 3.53-2.27.54.06 1.09.1 1.65.1 5.52 0 10-3.73 10-8.33zM10.84 13.4H8.46v-.72h1.49v-.81H8.46v-.66h1.94v-.82H7.55v3.83h3.29zm3.56.01h-2.12l2.12-3v-.84h-3.13v.81h2.12l-2.12 3v.84h3.13zm2.5-.01c1.07 0 1.57-.75 1.57-1.92 0-1.16-.5-1.91-1.57-1.91s-1.57.75-1.57 1.91c0 1.17.5 1.92 1.57 1.92zm0-.81c-.5 0-.66-.46-.66-1.11 0-.64.16-1.11.66-1.11s.66.47.66 1.11c0 .65-.16 1.11-.66 1.11z"/></svg></div><span>Zalo</span></a>
       
-      <a class="m4-sbtn" href="[YOUTUBE_URL]" target="_blank"><div class="ico ico-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#ff0000"/></svg></div><span>YouTube</span></a>
+      <a class="m4-sbtn" href="https://youtube.com/@huetatyvinhomes" target="_blank"><div class="ico ico-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#ff0000"/></svg></div><span>YouTube</span></a>
       <a class="m4-sbtn" href="https://wa.me/0825684139" target="_blank"><div class="ico ico-whatsapp"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.998 1.396l-.361.214-3.741-.983.998 3.645-.235.374a9.86 9.86 0 001.51 5.748c2.33 3.808 6.521 6.227 11.08 6.227h.001c5.437 0 9.980-4.414 10.991-10.231.056-.393.093-.789.093-1.188 0-5.439-4.414-9.853-9.853-9.853"/></svg></div><span>WhatsApp</span></a>
       <a class="m4-sbtn" href="viber://chat?number=0825684139"><div class="ico ico-viber"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5m-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11m3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5"/></svg></div><span>Viber</span></a>
     </div>
@@ -501,15 +511,24 @@ body::before {
     
     <div class="m4-proj" onclick="toggleProject(this)">
       <div class="m4-proj-img" style="background-size: cover; background-position: center;"><img src="vinhomes-ocean-park-1-2-3.jpg" style="width:100%; height:100%; object-fit: cover;"/></div>
-      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Ocean Park 2 & 3</div><div class="m4-proj-loc">📍 Gia Lâm, Hưng Yên – Hà Nội</div></div>
+      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Ocean Park 2 & 3</div><div class="m4-proj-loc">📍 Văn Giang, Hưng Yên (cửa ngõ phía Đông Hà Nội)</div></div>
     </div>
     <div class="m4-proj-detail">
-      <strong>Siêu quần thể đô thị biển 1200ha</strong> lớn nhất Việt Nam.
+      <strong>Siêu quần thể đô thị biển Ocean City – 1.200ha</strong>, mảnh ghép hoàn chỉnh của đại đô thị biển lớn nhất miền Bắc Việt Nam.<br><br>
+      <strong>🏗 Ocean Park 2 – The Empire:</strong>
       <ul>
-        <li><strong>Sản phẩm:</strong> Biệt thự đơn lập, song lập, liền kề và shophouse.</li>
-        <li><strong>Tiện ích nổi bật:</strong> Biển tạo sóng Royal Wave Park, Paradise Bay.</li>
-        <li><strong>Phù hợp:</strong> Đầu tư sinh lời và an cư lâu dài.</li>
+        <li><strong>Quy mô:</strong> 457ha, tổng vốn đầu tư 1,3 tỷ USD, ~65.000 cư dân.</li>
+        <li><strong>Vị trí:</strong> Xã Nghĩa Trụ & Long Hưng, huyện Văn Giang, Hưng Yên. Cách trung tâm Hà Nội 15km.</li>
+        <li><strong>Sản phẩm:</strong> Căn hộ cao tầng (124.000 căn), biệt thự, liền kề, shophouse (13.000+ căn thấp tầng). Sổ hồng lâu dài.</li>
+        <li><strong>Hạ tầng:</strong> Cao tốc Hà Nội – Hải Phòng, Vành đai 3.5, Metro số 8 đi qua dự án.</li>
       </ul>
+      <strong>🏗 Ocean Park 3 – The Crown:</strong>
+      <ul>
+        <li><strong>Quy mô:</strong> 294ha, tọa lạc tại xã Tân Quang & Nghĩa Trụ, Hưng Yên.</li>
+        <li><strong>Định vị:</strong> Mảnh ghép cuối trong siêu quần thể Ocean City 1.200ha.</li>
+        <li><strong>Sản phẩm:</strong> Biệt thự, liền kề, shophouse, căn hộ cao cấp. Kiến trúc sinh thái hiện đại.</li>
+      </ul>
+      <strong>✨ Tiện ích chung:</strong> Biển tạo sóng Royal Wave Park, Paradise Bay, Vinschool, Vinmec, Vincom, công viên xanh nội khu.<br>
       <div class="m4-mini-actions">
         <a href="tel:0825684139" class="m4-mini-btn mini-call">📞 Gọi ngay</a>
         <a href="https://zalo.me/0825684139" target="_blank" class="m4-mini-btn mini-zalo">💬 Chat Zalo</a>
@@ -518,13 +537,17 @@ body::before {
 
     <div class="m4-proj" onclick="toggleProject(this)">
       <div class="m4-proj-img" style="background-size: cover; background-position: center;"><img src="ha_long_xanh.jpg" style="width:100%; height:100%; object-fit: cover;"/></div>
-      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Hạ Long Xanh – Global Gate</div><div class="m4-proj-loc">📍 Hạ Long, Quảng Ninh</div></div>
+      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Hạ Long Xanh – Global Gate</div><div class="m4-proj-loc">📍 Tuần Châu (Hạ Long) & Quảng Yên, Quảng Ninh</div></div>
     </div>
     <div class="m4-proj-detail">
-      <strong>Kỳ quan đô thị mới</strong> bên bờ vịnh di sản. Dự án mang tầm vóc quốc tế đón đầu xu hướng giao thương toàn cầu.
+      <strong>Siêu đô thị biển lớn nhất lịch sử Việt Nam – 6.206ha</strong>, tổng vốn đầu tư 18 tỷ USD (~456.000 tỷ đồng). Ra mắt chính thức ngày 25/04/2026. Dự kiến mở bán Q2/2026.
       <ul>
-        <li><strong>Loại hình:</strong> Căn hộ cao cấp, biệt thự nghỉ dưỡng, TTTM.</li>
-        <li><strong>Lợi thế:</strong> Kết nối hạ tầng vàng Hạ Long - Hải Phòng - Hà Nội.</li>
+        <li><strong>Vị trí:</strong> Trải dài từ phường Tuần Châu, Hà Khẩu, Đại Yên (Hạ Long) đến Hà An, Tân An, Hoàng Tân (TX. Quảng Yên). Ba mặt giáp Vịnh Di sản Hạ Long.</li>
+        <li><strong>Quy mô dân số:</strong> ~380.000 người. Khoảng 48.000–55.000 sản phẩm.</li>
+        <li><strong>Sản phẩm:</strong> Biệt thự đơn lập, song lập, tứ lập, liền kề, shophouse, căn hộ, condotel, khách sạn nghỉ dưỡng.</li>
+        <li><strong>Phân khu:</strong> Châu Mỹ, Châu Úc, Châu Á, Châu Âu, Kỳ Quan Mới, CVR – mỗi khu mang bản sắc kiến trúc riêng.</li>
+        <li><strong>Hạ tầng:</strong> Tiếp giáp cao tốc Hạ Long – Hải Phòng, hầm xuyên vịnh Cửa Lục, hệ thống cầu Cửa Lục 1–2–3. Cách Hà Nội 1,5h qua cao tốc.</li>
+        <li><strong>Tiện ích:</strong> Vinmec, Vinschool, Vincom Mall, sân golf, bến du thuyền, công viên chuyên đề quốc tế.</li>
       </ul>
       <div class="m4-mini-actions">
         <a href="tel:0825684139" class="m4-mini-btn mini-call">📞 Gọi ngay</a>
@@ -534,13 +557,18 @@ body::before {
 
     <div class="m4-proj" onclick="toggleProject(this)">
       <div class="m4-proj-img" style="background-size: cover; background-position: center;"><img src="hai_van_bay.jpg" style="width:100%; height:100%; object-fit: cover;"/></div>
-      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Hải Vân Bay</div><div class="m4-proj-loc">📍 Liên Chiểu, Đà Nẵng</div></div>
+      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Hải Vân Bay</div><div class="m4-proj-loc">📍 Khu vực Làng Vân, phường Hải Vân, quận Liên Chiểu, Đà Nẵng</div></div>
     </div>
     <div class="m4-proj-detail">
-      <strong>Tuyệt tác nghỉ dưỡng</strong> tựa sơn hướng thủy tại cung đường biển đẹp nhất miền Trung.
+      <strong>Siêu đô thị nghỉ dưỡng ven biển lớn nhất miền Trung – 512ha</strong>, tổng vốn đầu tư ~44.000 tỷ đồng. Vị trí "tựa sơn hướng hải" ngay chân đèo Hải Vân huyền thoại, 3 mặt giáp biển Đông. Dự kiến vận hành từ 2027.
       <ul>
-        <li><strong>Sản phẩm:</strong> Shophouse ven biển, biệt thự đồi, căn hộ resort 5 sao.</li>
-        <li><strong>Đặc điểm:</strong> Thừa hưởng tiềm năng du lịch lớn và cảng Liên Chiểu mới.</li>
+        <li><strong>Vị trí:</strong> Làng Vân, phường Hòa Hiệp Bắc (nay là phường Hải Vân), quận Liên Chiểu, Đà Nẵng – ngay chân đèo Hải Vân.</li>
+        <li><strong>Chủ đầu tư:</strong> Công ty CP Vinpearl (thuộc Tập đoàn Vingroup).</li>
+        <li><strong>Mô hình:</strong> "Thành phố nghỉ dưỡng thông minh" – Luxury Green Living. Mật độ xây dựng thấp, bảo tồn hệ sinh thái rừng và vịnh Làng Vân.</li>
+        <li><strong>Sản phẩm:</strong> Biệt thự đơn lập, song lập, nhà liền kề, shophouse, căn hộ cao tầng, condotel, khách sạn. Trên 90% sở hữu lâu dài (sổ đỏ).</li>
+        <li><strong>Phân khu:</strong> Bạch Vân (liền kề, biệt thự phong cách Châu Á), Tinh Vân (biệt thự biển đặc quyền, khoáng nóng onsen).</li>
+        <li><strong>Hạ tầng:</strong> Kết nối cảng Liên Chiểu mới, sân bay Đà Nẵng quốc tế, hưởng lợi từ hầm Hải Vân mở rộng.</li>
+        <li><strong>Tiện ích:</strong> Mikado Onsen Retreat, bãi biển riêng, công viên chuyên đề, Vinmec, Vinschool.</li>
       </ul>
       <div class="m4-mini-actions">
         <a href="tel:0825684139" class="m4-mini-btn mini-call">📞 Gọi ngay</a>
@@ -550,13 +578,17 @@ body::before {
 
     <div class="m4-proj" onclick="toggleProject(this)">
       <div class="m4-proj-img" style="background-size: cover; background-position: center;"><img src="vin_cangio.jpg" style="width:100%; height:100%; object-fit: cover;"/></div>
-      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Cần Giờ</div><div class="m4-proj-loc">📍 Cần Giờ, TP. Hồ Chí Minh</div></div>
+      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Green Paradise – Cần Giờ</div><div class="m4-proj-loc">📍 Xã Cần Giờ, huyện Cần Giờ, TP. Hồ Chí Minh</div></div>
     </div>
     <div class="m4-proj-detail">
-      <strong>Siêu dự án lấn biển quy mô 2.870 ha</strong>, biểu tượng sinh thái tương lai của TP.HCM.
+      <strong>Siêu đô thị lấn biển ESG đầu tiên Việt Nam – 2.870ha</strong>, tổng vốn đầu tư 10–11 tỷ USD (~63.790 sản phẩm). Mô hình "Tiểu Dubai – Singapore của châu Á". Bờ biển dài 12km hình vòng cung.
       <ul>
-        <li><strong>Sản phẩm:</strong> Biệt thự biển, nhà phố thương mại, condotel.</li>
-        <li><strong>Điểm nhấn:</strong> Kết hợp sinh thái rừng ngập mặn với đô thị hiện đại.</li>
+        <li><strong>Vị trí:</strong> Xã Cần Giờ, huyện Cần Giờ, TP.HCM – cửa ngõ biển phía Nam thành phố.</li>
+        <li><strong>Mô hình:</strong> Đô thị ESG++ (Environmental – Social – Governance). 70% diện tích dành cho không gian xanh, mặt nước và tiện ích.</li>
+        <li><strong>Sản phẩm:</strong> Biệt thự biển (250–600m²), biệt thự song/đơn lập, nhà phố liền kề, shophouse, căn hộ cao tầng, condotel, Sky Villa, officetel, khách sạn.</li>
+        <li><strong>4 phân khu:</strong> The Haven Bay (~771ha – vui chơi giải trí), The Green Bay (~587ha – sức khỏe xanh), The Paradise (~303ha – tài chính cảng quốc tế), The Grand Island (~450ha – đảo lễ hội biển nhiệt đới).</li>
+        <li><strong>Hạ tầng:</strong> Đường sắt cao tốc Bến Thành – Cần Giờ (hoàn thiện 2028), cầu Cần Giờ mới, cao tốc Bến Lức – Long Thành.</li>
+        <li><strong>Điểm nhấn:</strong> Nhà hát Sóng Xanh lớn nhất Đông Nam Á, bến du thuyền, tháp biểu tượng 108 tầng, kết hợp rừng ngập mặn sinh thái.</li>
       </ul>
       <div class="m4-mini-actions">
         <a href="tel:0825684139" class="m4-mini-btn mini-call">📞 Gọi ngay</a>
@@ -566,13 +598,16 @@ body::before {
 
     <div class="m4-proj" onclick="toggleProject(this)">
       <div class="m4-proj-img" style="background-size: cover; background-position: center;"><img src="sai_gon_park.jpg" style="width:100%; height:100%; object-fit: cover;"/></div>
-      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Sài Gòn Park</div><div class="m4-proj-loc">📍 Quận 9, TP. Hồ Chí Minh</div></div>
+      <div class="m4-proj-info"><div class="m4-proj-name">Vinhomes Sài Gòn Park</div><div class="m4-proj-loc">📍 Hóc Môn, Tây Bắc TP. Hồ Chí Minh</div></div>
     </div>
     <div class="m4-proj-detail">
-      <strong>Không gian sống xanh mát</strong> biệt lập ngay tại tâm điểm năng động của thành phố Thủ Đức.
+      <strong>Đại đô thị sinh thái – tri thức quy mô 1.080 ha</strong>, tổng vốn đầu tư 3,5 tỷ USD tại cửa ngõ Tây Bắc TP.HCM. Khởi công tháng 12/2025, dự kiến mở bán giai đoạn 1 tháng 6/2026.
       <ul>
-        <li><strong>Sản phẩm:</strong> Căn hộ thông minh, penthouse thượng lưu.</li>
-        <li><strong>Tiện ích:</strong> Công viên ven sông rộng lớn, Vinschool, Vinmec nội khu.</li>
+        <li><strong>Vị trí:</strong> Xã Xuân Thới Sơn, huyện Hóc Môn – mặt tiền Quốc lộ 22.</li>
+        <li><strong>Mô hình:</strong> Khu đô thị Đại học Quốc tế All-in-one – "Thành phố trong lòng thành phố".</li>
+        <li><strong>Sản phẩm:</strong> Biệt thự, shophouse, căn hộ cao cấp, condotel, 82 tuyến phố thương mại.</li>
+        <li><strong>Hạ tầng:</strong> Kết nối Vành đai 3, cao tốc TP.HCM – Mộc Bài, Metro số 2.</li>
+        <li><strong>Tiện ích:</strong> Vinschool, Vinmec, Vincom Mall, sân golf Vinpearl 200ha, 40% diện tích xanh.</li>
       </ul>
       <div class="m4-mini-actions">
         <a href="tel:0825684139" class="m4-mini-btn mini-call">📞 Gọi ngay</a>
